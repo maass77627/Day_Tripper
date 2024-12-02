@@ -1,12 +1,20 @@
 #body {
-    width: 100%;
-   height: 100%;
+     /* width: 100%; */
+   /* height: 100%;
    overflow: hidden; 
-   margin: 0;
+   margin: 0; */ 
     background-color: rgb(1, 1, 58);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
 
+#title{
+    position: absolute;
+    top: 50px;
+    left: 600px;
+    font-size: 80px;
+    color: white;
+    z-index: 1;
+}
 
 #myCarousel {
     position: relative;
@@ -22,7 +30,7 @@
 }
 
 .carousel-item {
-    height: 500px;
+    height: 300px;
     width: 800px;
     background-color: rgb(88, 88, 90);
     /* text-align: center; */
@@ -35,27 +43,27 @@
 #img1{
     position: absolute;
     left: 0px;
-    height: 500px;
+    height: 300px;
     width: 1400px;
 }
 #img2{
     position: absolute;
     left: 0px;
-    height: 500px;
+    height: 300px;
     width: 1400px;
 }
 #img3{
     position: absolute;
     left: 0px;
-    height: 500px;
+    height: 300px;
     width: 1400px;
 }
 
 #form{
     position: absolute;
     border-radius: 20px;
-    left: 750px;
-    top: 400px
+    left: 700px;
+    top: 250px
 }
 
 #input{
@@ -65,17 +73,41 @@
 }
 
 #card{
+    float: right;
+     position: relative; 
+     left: 0px;
+    top: 50px;
     border-radius: 30px;
     height: 400px;
     width: 300px;
 }
 
 #container{
- height: 300px;
- width: 700px;
+    position: absolute;
+    top: 400px;
+    left: 100px;
+    height: 500px;
+    width: 1800px;
+    background-color: aliceblue;
 }
 
 #cardimage{
     height: 250px;
+
+}
+
+
+#iframe{
+    position: absolute;
+    top: 1000px;
+    left: 500px;
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+.nothidden{
+    visibility: visible;
 
 }
