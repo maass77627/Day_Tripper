@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     let globalData
+    let container = document.getElementById("container")
 
     fetch(`https://developer.nps.gov/api/v1/parks?api_key=1A1ysntfoonKKUeUWGZEkhfdQacwcXmb9kedUFy4`)
     .then((response) => response.json())
@@ -28,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     function filter(data) {
+        container.innerHTML = ' '
         console.log(data)
         console.log(globalData)
         let parks = globalData.filter((park) => park.states == data)
@@ -36,11 +38,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
  function createCard(park) {
+   
+
     let card = document.createElement("div")
     card.className = "card"
     card.id = "card"
     card.innerHTML = `
     <img id="cardimage" src="${park.images[0].url}" class="card-img-top" alt="card">
+                <i class="fa-regular fa-star"></i>
                 <div class="card-body">
                     <h5 class="card-title">${park.name}</h5>
                     <h6 class="card-subtitle mb-2 text-body-secondary">${park.states}</h6>
@@ -48,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
     
     `
-    let container = document.getElementById("container")
+    // let container = document.getElementById("container")
      container.appendChild(card)
    
  }

@@ -72,8 +72,19 @@
     width: 500px;
 }
 
+.fa-regular fa-star{
+    position: absolute;
+    top: 0px;
+    height: 20px;
+    width: 20px;
+    z-index: 3;
+
+}
+
 #card{
-    float: right;
+    
+    margin-right: 20px;
+    float: left;
      position: relative; 
      left: 0px;
     top: 50px;
@@ -88,7 +99,8 @@
     left: 100px;
     height: 500px;
     width: 1800px;
-    background-color: aliceblue;
+    /* background-color: aliceblue; */
+    background-color: rgb(1, 1, 58);
 }
 
 #cardimage{
