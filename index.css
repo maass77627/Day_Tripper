@@ -104,9 +104,9 @@
 #container{
     position: absolute;
     top: 400px;
-    left: 100px;
+    left: 150px;
     height: 500px;
-    width: 1800px;
+    width: 1600px;
     /* background-color: aliceblue; */
     background-color: rgb(1, 1, 58);
 }
@@ -118,13 +118,21 @@
 }
 
 #parkinfo {
+    border-radius: 20px;
     position: absolute;
-    left: 200px;
+    left: 150px;
     top: 350px;
     height: 500px;
-    width: 1500px;
+    width: 1600px;
     background-color: white;
     z-index: 4; 
+}
+
+#infoimage{
+    position: absolute;
+    left: 400px;
+    height: 500px;
+    width: 800px;
 }
 
 #iframe{

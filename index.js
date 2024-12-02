@@ -12,11 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let parkinfo = document.getElementById("parkinfo")
     parkinfo.addEventListener("click", (e) => { 
         parkinfo.className == "hidden" ? parkinfo.className = "nothidden" : parkinfo.className = "hidden"
-        // if (parkinfo.className == "hidden") {
-        //     parkinfo.className == "nothidden"
-        // } else {
-        //     parkinfo.className == "hidden"
-        // }
     })
 
     fetch(`https://developer.nps.gov/api/v1/parks?api_key=1A1ysntfoonKKUeUWGZEkhfdQacwcXmb9kedUFy4`)
@@ -71,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
  function getCardInfo(e, park) {
     parkinfo.className = "nothidden"
     parkinfo.innerHTML = `
-       
+       <img id="infoimage" src="${park.images[0].url}"></img>
     `
     console.log(e)
     console.log(park)
