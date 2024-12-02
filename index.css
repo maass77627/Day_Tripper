@@ -111,6 +111,67 @@
     background-color: rgb(1, 1, 58);
 }
 
+#containertwo{
+    position: absolute;
+    top: 900px;
+    left: 150px;
+    height: 300px;
+    width: 1600px;
+    background-color: pink;
+
+}
+
+#containerthree{
+    position: absolute;
+    top: 1300px;
+    left: 150px;
+    height: 300px;
+    width: 1600px;
+    background-color: rgb(34, 70, 18);
+
+}
+
+#stargazing{
+    position: absolute;
+    left: 50px;
+     border-radius: 50%; 
+    width: 300px;
+    height: 300px;
+}
+
+#hiking{
+    position: absolute;
+    left: 350px;
+     border-radius: 50%; 
+    width: 300px;
+    height: 300px;
+}
+
+#kayaking{
+    position: absolute;
+    left: 650px;
+     border-radius: 50%; 
+    width: 300px;
+    height: 300px;
+}
+
+#camping{
+    position: absolute;
+    left: 950px;
+    border-radius: 50%; 
+    width: 300px;
+    height: 300px;
+}
+
+#horseback{
+    position: absolute;
+    left: 1250px;
+    border-radius: 50%; 
+    width: 300px;
+    height: 300px;
+}
+
+
 #cardimage{
     border-radius: 20px;
     height: 250px;
@@ -130,9 +191,16 @@
 
 #infoimage{
     position: absolute;
+    top: 0px;
     left: 400px;
     height: 500px;
     width: 800px;
+}
+
+#infotitle{
+    position: fixed;
+    /* position: absolute; */
+    left: 400px;
 }
 
 #iframe{

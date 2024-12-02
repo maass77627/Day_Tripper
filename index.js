@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let form = document.getElementById("form")
     form.addEventListener("submit", (e) => {
         e.preventDefault()
-        console.log(e.target.input.value)
+        
         filter(e.target.input.value)
     })
 
@@ -66,7 +66,10 @@ document.addEventListener("DOMContentLoaded", () => {
  function getCardInfo(e, park) {
     parkinfo.className = "nothidden"
     parkinfo.innerHTML = `
+            <h5  id="infotitle" class="card-title">${park.name}</h5>
        <img id="infoimage" src="${park.images[0].url}"></img>
+       <p>${park.activities}</p>
+       <p>${park.operatingHours}</p>
     `
     console.log(e)
     console.log(park)
