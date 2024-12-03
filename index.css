@@ -89,6 +89,22 @@
     z-index: 1;
 }
 
+#label2{
+    position: absolute;
+    left: 200px;
+    top: 850px;
+    z-index: 1;
+
+}
+
+#label3{
+    position: absolute;
+    left: 200px;
+    top: 1260px;
+    z-index: 1;
+    
+}
+
 #card{
     
     margin-right: 20px;

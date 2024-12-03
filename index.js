@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
-
-    let form = document.getElementById("form")
+   let [form, container, parkinfo, stars] = document.querySelectorAll("#form, #stargazing, #container, #parkinfo")
+    
     form.addEventListener("submit", (e) => {
         e.preventDefault()
-        
         filter(e.target.input.value)
     })
 
     let globalData
-    let container = document.getElementById("container")
-    let parkinfo = document.getElementById("parkinfo")
+    
+    stars.addEventListener("click", (e) => {filterStars(e)})
+    
     parkinfo.addEventListener("click", (e) => { 
         parkinfo.className == "hidden" ? parkinfo.className = "nothidden" : parkinfo.className = "hidden"
     })
@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(json.data[0].states)
         console.log(json.data[0].entranceFees)
         console.log(json.data[0].operatingHours)
+        console.log(json.data[0].activities)
         console.log(json.data[0].activities[0].name)
         console.log(json.data[0].fullName)
         console.log(json.data[0].images)
@@ -33,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     function filter(data) {
+        console.log(data)
         container.innerHTML = ' '
         let label = document.getElementById("label")
         label.innerText = `Top parks in ${data}`
@@ -41,6 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
  function createCard(park) {
+    console.log(container)
+    console.log(park)
    let card = document.createElement("div")
     card.className = "card"
     card.id = "card"
@@ -55,6 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
     `
     card.addEventListener("click", (e) => getCardInfo(e, park))
      container.appendChild(card)
+     console.log(container)
    }
 
 
@@ -79,7 +84,30 @@ document.addEventListener("DOMContentLoaded", () => {
     
  }
 
+ function filterStars(e){
+    console.log(e.target)
 
+    let array = []
+    for (let i = 0; i < globalData.length; i++) {
+         for(let x = 0; x < globalData[i].activities.length; x++) {
+            if (globalData[i].activities[x].name == "Astronomy") {
+                array.push(globalData[i])
+            }
+                
+         }
+    }
+    
+    console.log(array)
+
+ }
+
+//  for (let i = 0; i < array.length; i++) {
+//     for (let j = 0; j < array[i].length; j++) {
+//       console.log(array[i][j]);
+//     }
+//   }
+
+//   if globalData[1].activities[0].name
 
 
 
