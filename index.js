@@ -66,21 +66,23 @@ document.addEventListener("DOMContentLoaded", () => {
  function getCardInfo(e, park) {
     parkinfo.className = "nothidden"
     parkinfo.innerHTML = `
+            <h3 id="activitylabel">Activities at ${park.name}...</h3>
             <h5  id="infotitle" class="card-title">${park.name}</h5>
        <img id="infoimage" src="${park.images[0].url}"></img>
+       <p id="infohours">${park.weatherInfo}</p>
     `
     let p = document.createElement("p")
     p.id="infoactivities"
     park.activities.forEach((activity) => {
-       p.innerText += activity.name
+       p.innerText += " " + activity.name + ", "
     })
 
     parkinfo.appendChild(p)
 
-    let ptwo = document.createElement("p")
-    ptwo.id="infohours"
-    ptwo.innerText = park.weatherInfo
-    parkinfo.appendChild(ptwo)
+    // let ptwo = document.createElement("p")
+    // ptwo.id="infohours"
+    // ptwo.innerText = park.weatherInfo
+    // parkinfo.appendChild(ptwo)
     
  }
 
