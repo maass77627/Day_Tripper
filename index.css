@@ -198,9 +198,10 @@
 }
 
 #infotitle{
-    position: fixed;
+    position: absolute;
     /* position: absolute; */
-    left: 400px;
+    left: 750px;
+    z-index: 1;
 }
 
 #iframe{
@@ -215,5 +216,22 @@
 
 .nothidden{
     visibility: visible;
+
+}
+
+#infoactivities{
+    position: absolute;
+    top: 100px;
+    left: 25px;
+    height: 100px;
+    width: 300px;
+}
+
+#infohours{
+    position: absolute;
+    top: 100px;
+    left: 1250px;
+    height: 100px;
+    width: 300px;
 
 }

@@ -36,11 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
         container.innerHTML = ' '
         let label = document.getElementById("label")
         label.innerText = `Top parks in ${data}`
-        console.log(data)
-        console.log(globalData)
         let parks = globalData.filter((park) => park.states == data)
-        console.log(parks)
-        parks.forEach((park) => createCard(park))
+       parks.forEach((park) => createCard(park))
     }
 
  function createCard(park) {
@@ -55,12 +52,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     <h6 class="card-subtitle mb-2 text-body-secondary">${park.states}</h6>
                     <p class="card-text">"this is a park"</p>
                 </div>
-    
     `
     card.addEventListener("click", (e) => getCardInfo(e, park))
      container.appendChild(card)
-   
- }
+   }
 
 
  function getCardInfo(e, park) {
@@ -68,12 +63,20 @@ document.addEventListener("DOMContentLoaded", () => {
     parkinfo.innerHTML = `
             <h5  id="infotitle" class="card-title">${park.name}</h5>
        <img id="infoimage" src="${park.images[0].url}"></img>
-       <p>${park.activities}</p>
-       <p>${park.operatingHours}</p>
     `
-    console.log(e)
-    console.log(park)
+    let p = document.createElement("p")
+    p.id="infoactivities"
+    park.activities.forEach((activity) => {
+       p.innerText += activity.name
+    })
 
+    parkinfo.appendChild(p)
+
+    let ptwo = document.createElement("p")
+    ptwo.id="infohours"
+    ptwo.innerText = park.weatherInfo
+    parkinfo.appendChild(ptwo)
+    
  }
 
 
