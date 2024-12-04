@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
    let [form, container, parkinfo, stars] = document.querySelectorAll("#form, #stargazing, #container, #parkinfo")
     
+
     form.addEventListener("submit", (e) => {
         e.preventDefault()
         filter(e.target.input.value)
@@ -64,25 +65,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
  function getCardInfo(e, park) {
+    console.log(park.operatingHours[0].standardHours.monday)
+
+    let scroller = document.createElement("div")
+    scroller.id = "scroll"
+    scroller.className="scrollable-div"
+
     parkinfo.className = "nothidden"
     parkinfo.innerHTML = `
-            <h3 id="activitylabel">Activities at ${park.name}...</h3>
             <h5  id="infotitle" class="card-title">${park.name}</h5>
-       <img id="infoimage" src="${park.images[0].url}"></img>
-       <p id="infohours">${park.weatherInfo}</p>
+            <img id="infoimage" src="${park.images[0].url}"></img>
     `
+    let p3 = document.createElement("p")
+    p3.id = "infoweather"
+    p3.innerText = `${park.weatherInfo}`
+
+    let p2 = document.createElement("p")
+    p2.id = "infohours"
+    p2.innerText = `Monday: ${park.operatingHours[0].standardHours.monday} <br> Tuesday: ${park.operatingHours[0].standardHours.tuesday} <br>Wednesday: ${park.operatingHours[0].standardHours.wednesday} <br>Thursday: ${park.operatingHours[0].standardHours.thursday} <br>Friday: ${park.operatingHours[0].standardHours.friday}`
+    
     let p = document.createElement("p")
     p.id="infoactivities"
     park.activities.forEach((activity) => {
        p.innerText += " " + activity.name + ", "
     })
+    scroller.appendChild(p3)
+    scroller.appendChild(p2)
+     scroller.appendChild(p)
+     parkinfo.appendChild(scroller)
 
-    parkinfo.appendChild(p)
-
-    // let ptwo = document.createElement("p")
-    // ptwo.id="infohours"
-    // ptwo.innerText = park.weatherInfo
-    // parkinfo.appendChild(ptwo)
+   
     
  }
 

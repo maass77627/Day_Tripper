@@ -18,19 +18,16 @@
 
 
 #myCarousel {
-    /* position: relative; */
-    /* left: 250px; */
-    /* top: 10px; */
     margin-top: 0px;
     margin-left: auto;
     margin-right: auto;
     
     
 }
-/* changed margin  */
+
 
 .carousel-indicators {
-    /* position: absolute; */
+    
     margin-top: 0px;
     margin-left: auto;
     margin-right: auto;
@@ -43,9 +40,9 @@
     height: 300px;
     width: 1400px;
     background-color: rgb(88, 88, 90);
-    /* text-align: center; */
+    
 }
-/* changed margin  */
+
 
 
 #img1{
@@ -53,43 +50,35 @@
      left: 0px; 
     height: 300px;
     width: 1400px;
-    /* margin-top: 0px;
-    margin-left: auto;
-    margin-right: auto; */
+    
 }
-/* changed margin  */
+
 #img2{
      position: absolute;
      left: 0px; 
     height: 300px;
     width: 1400px;
-    /* margin-top: 0px;
-    margin-left: auto;
-    margin-right: auto; */
+   
 }
-/* changed margin  */
+
 #img3{
     position: absolute; 
     left: 0px; 
     height: 300px;
     width: 1400px;
-    /* margin-top: 0px;
-    margin-left: auto;
-    margin-right: auto; */
+   
 }
-/* changed margin  */
+
 
 #form{
     position: absolute; 
     border-radius: 20px;
-    /* margin-top: 0px;
-    margin-left: auto;
-    margin-right: auto; */
+    
     z-index: 1;
      left: 700px; 
      top: 250px 
 }
-/* changed margin  */
+
 
 #input{
     border-radius: 50px;
@@ -143,18 +132,17 @@
 }
 
 #container{
-    /* position: absolute; */
-    /* top: 400px; */
+    
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
     /* left: 150px; */
     height: 500px;
     width: 1600px;
-    /* background-color: aliceblue; */
+    
     background-color: rgb(1, 1, 58);
 }
-/* changed margin  */
+
 
 #containertwo{
     /* position: absolute;  */
@@ -168,7 +156,7 @@
     background-color: pink;
 
 }
-/* changed margin  */
+
 
 #containerthree{
     /* position: absolute; */
@@ -273,23 +261,48 @@
 
 #infoactivities{
     position: absolute;
-    top: 100px;
+    top: 400px;
     left: 25px;
     height: 100px;
     width: 300px;
 }
 
+#infoweather{
+ position: absolute;
+    top: 200px;
+    
+
+}
+
+
+
+
+
+
+
 #infohours{
     position: absolute;
-    top: 100px;
-    left: 1250px;
-    height: 100px;
-    width: 300px;
+    top: 70px;
+   
 
 }
 
-#activitylabel{
+
+
+.scrollable-div {
+    width: 400px;
+    height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden; 
+    border: 1px solid #ccc;
+    padding: 10px; 
+}
+
+#scroll{
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 0px;
+    right: 0px;
+    z-index: 2;
+    
 }
+
