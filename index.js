@@ -10,6 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {
     let globalData
     
     stars.addEventListener("click", (e) => {filterStars(e)})
+
+    let like = document.getElementById("star")
+    console.log(like)
+    like.addEventListener("click", (e) => {likedPark(e)})
     
     parkinfo.addEventListener("click", (e) => { 
         parkinfo.className == "hidden" ? parkinfo.className = "nothidden" : parkinfo.className = "hidden"
@@ -50,15 +54,22 @@ document.addEventListener("DOMContentLoaded", () => {
     card.className = "card"
     card.id = "card"
     card.innerHTML = `
-    <img id="cardimage" src="${park.images[0].url}" class="card-img-top" alt="card">
+    
                 <span id="star" class="fa fa-star">&#9733</span>
-                <div class="card-body">
+                <div id="card-body" class="card-body">
                     <h5 class="card-title">${park.name}</h5>
                     <h6 class="card-subtitle mb-2 text-body-secondary">${park.states}</h6>
                     <p class="card-text">"this is a park"</p>
                 </div>
     `
-    card.addEventListener("click", (e) => getCardInfo(e, park))
+    
+    let image = document.createElement("img")
+    image.id = "cardimage"
+    image.src = `${park.images[0].url}`
+    image.className = "card-img-top"
+    image.addEventListener("click", (e) => getCardInfo(e, park))
+    card.appendChild(image)
+    // card.addEventListener("click", (e) => getCardInfo(e, park))
      container.appendChild(card)
      console.log(container)
    }
@@ -78,11 +89,11 @@ document.addEventListener("DOMContentLoaded", () => {
     `
     let p3 = document.createElement("p")
     p3.id = "infoweather"
-    p3.innerText = `${park.weatherInfo}`
+    p3.innerText = `Weather Info: \n ${park.weatherInfo}`
 
     let p2 = document.createElement("p")
     p2.id = "infohours"
-    p2.innerText = `Monday: ${park.operatingHours[0].standardHours.monday} <br> Tuesday: ${park.operatingHours[0].standardHours.tuesday} <br>Wednesday: ${park.operatingHours[0].standardHours.wednesday} <br>Thursday: ${park.operatingHours[0].standardHours.thursday} <br>Friday: ${park.operatingHours[0].standardHours.friday}`
+    p2.innerText = ` Operating Hours: \n Monday: ${park.operatingHours[0].standardHours.monday} \n Tuesday: ${park.operatingHours[0].standardHours.tuesday} \n Wednesday: ${park.operatingHours[0].standardHours.wednesday} \n Thursday: ${park.operatingHours[0].standardHours.thursday} \n Friday: ${park.operatingHours[0].standardHours.friday}`
     
     let p = document.createElement("p")
     p.id="infoactivities"
@@ -115,6 +126,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
  }
 
+
+ function likedPark(e) {
+    console.log(e.target)
+    console.log("clicked")
+    console.log(like)
+     like.style.color = "green"
+
+ }
 //  for (let i = 0; i < array.length; i++) {
 //     for (let j = 0; j < array[i].length; j++) {
 //       console.log(array[i][j]);

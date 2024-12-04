@@ -93,7 +93,7 @@
     width: 50px;
     position: absolute;
     z-index: 1;
-
+    color:rgb(4, 14, 0);
 }
 
 #label{
@@ -173,7 +173,7 @@
 /* changed margin  */
 #stargazing{
     position: absolute;
-    left: 170px;
+    left: 200px;
      border-radius: 50%; 
     width: 300px;
     height: 300px;
@@ -181,7 +181,7 @@
 
 #hiking{
     position: absolute;
-    left: 470px;
+    left: 500px;
      border-radius: 50%; 
     width: 300px;
     height: 300px;
@@ -189,7 +189,7 @@
 
 #kayaking{
     position: absolute;
-    left: 770px;
+    left: 800px;
      border-radius: 50%; 
     width: 300px;
     height: 300px;
@@ -197,7 +197,7 @@
 
 #camping{
     position: absolute;
-    left: 1070px;
+    left: 1100px;
     border-radius: 50%; 
     width: 300px;
     height: 300px;
@@ -205,14 +205,21 @@
 
 #horseback{
     position: absolute;
-    left: 1370px;
+    left: 1400px;
     border-radius: 50%; 
     width: 300px;
     height: 300px;
 }
 
+#card-body {
+    position: absolute;
+    bottom: 0px;
+}
+
 
 #cardimage{
+    position: absolute;
+    top: 0px;
     border-radius: 20px;
     height: 250px;
 
@@ -232,7 +239,7 @@
 #infoimage{
     position: absolute;
     top: 0px;
-    left: 400px;
+    left: 100px;
     height: 500px;
     width: 800px;
 }
@@ -240,7 +247,7 @@
 #infotitle{
     position: absolute;
     /* position: absolute; */
-    left: 750px;
+    left: 450px;
     z-index: 1;
 }
 
@@ -261,17 +268,18 @@
 
 #infoactivities{
     position: absolute;
-    top: 400px;
-    left: 25px;
+    top: 500px;
+    left: 150px;
     height: 100px;
-    width: 300px;
+    width: 400px;
+    text-align: center;
 }
 
 #infoweather{
  position: absolute;
-    top: 200px;
+    top: 250px;
     
-
+    text-align: center;
 }
 
 
@@ -283,14 +291,15 @@
 #infohours{
     position: absolute;
     top: 70px;
-   
+    left: 280px;
+    text-align: center;
 
 }
 
 
 
 .scrollable-div {
-    width: 400px;
+    width: 700px;
     height: 500px;
     overflow-y: auto;
     overflow-x: hidden; 
@@ -303,6 +312,7 @@
     top: 0px;
     right: 0px;
     z-index: 2;
+    
     
 }
 
