@@ -1,6 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
    let [form, container, parkinfo, stars] = document.querySelectorAll("#form, #stargazing, #container, #parkinfo")
     
+    let containerfour = document.getElementById("containerfour")
+    let button = document.getElementById("parkbutton")
+    button.addEventListener("click", (e) => toggleParks(e))
+
 
     form.addEventListener("submit", (e) => {
         e.preventDefault()
@@ -11,9 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
     
     stars.addEventListener("click", (e) => {filterStars(e)})
 
-    let like = document.getElementById("star")
-    console.log(like)
-    like.addEventListener("click", (e) => {likedPark(e)})
+    // let like = document.getElementById("star")
+    // console.log(like)
+    // like.addEventListener("click", (e) => {likedPark(e)})
     
     parkinfo.addEventListener("click", (e) => { 
         parkinfo.className == "hidden" ? parkinfo.className = "nothidden" : parkinfo.className = "hidden"
@@ -54,8 +58,6 @@ document.addEventListener("DOMContentLoaded", () => {
     card.className = "card"
     card.id = "card"
     card.innerHTML = `
-    
-                <span id="star" class="fa fa-star">&#9733</span>
                 <div id="card-body" class="card-body">
                     <h5 class="card-title">${park.name}</h5>
                     <h6 class="card-subtitle mb-2 text-body-secondary">${park.states}</h6>
@@ -69,6 +71,13 @@ document.addEventListener("DOMContentLoaded", () => {
     image.className = "card-img-top"
     image.addEventListener("click", (e) => getCardInfo(e, park))
     card.appendChild(image)
+
+    let like = document.createElement("span")
+    like.id = "star"
+    like.className = "fa fa-star"
+    like.innerHTML = "&#9733"
+    like.addEventListener("click", (e) => {likedPark(e, like)})
+    card.appendChild(like)
     // card.addEventListener("click", (e) => getCardInfo(e, park))
      container.appendChild(card)
      console.log(container)
@@ -111,8 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
  function filterStars(e){
     console.log(e.target)
-
-    let array = []
+   let array = []
     for (let i = 0; i < globalData.length; i++) {
          for(let x = 0; x < globalData[i].activities.length; x++) {
             if (globalData[i].activities[x].name == "Astronomy") {
@@ -123,16 +131,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     console.log(array)
+}
 
- }
 
-
- function likedPark(e) {
-    console.log(e.target)
+ function likedPark(e, like) {
+    console.log(e.target.parentNode)
     console.log("clicked")
     console.log(like)
+    //  let like = document.getElementById("star")
      like.style.color = "green"
-
+    let card = e.target.parentNode
+    containerfour.appendChild(card)
+    
  }
 //  for (let i = 0; i < array.length; i++) {
 //     for (let j = 0; j < array[i].length; j++) {
@@ -143,7 +153,14 @@ document.addEventListener("DOMContentLoaded", () => {
 //   if globalData[1].activities[0].name
 
 
-
+function toggleParks(e) {
+    console.log("clicked")
+   if  (containerfour.className = "hidden") {
+    containerfour.className = "nothidden"
+   } else {
+    containerfour.className = "hidden"
+   }
+}
 
 
 
