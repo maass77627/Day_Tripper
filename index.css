@@ -120,9 +120,10 @@
 }
 
 #card{
-    
+    display: inline-block;
+
     margin-right: 20px;
-    float: left;
+    /* float: left; */
      position: relative; 
      left: 0px;
     top: 50px;
@@ -132,7 +133,10 @@
 }
 
 #container{
-    
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
