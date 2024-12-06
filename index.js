@@ -51,6 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     function filter(data) {
+        let contnum = 1
         console.log(data)
         state = data
         console.log(state)
@@ -62,11 +63,12 @@ document.addEventListener("DOMContentLoaded", () => {
         let label = document.getElementById("label")
         label.innerText = `Top parks in ${data}`
         let parks = globalData.filter((park) => park.states == data)
-       parks.forEach((park) => createCard(park))
+       parks.forEach((park) => createCard(park, contnum))
         }
     }
 
- function createCard(park) {
+ function createCard(park, contnum) {
+    console.log(contnum)
     console.log(state)
     console.log(container)
     console.log(park)
@@ -95,8 +97,12 @@ document.addEventListener("DOMContentLoaded", () => {
     like.addEventListener("click", (e) => {likedPark(e, like)})
     card.appendChild(like)
     // card.addEventListener("click", (e) => getCardInfo(e, park))
+    if (contnum == 1){
      container.appendChild(card)
-     console.log(container)
+    } else if (contnum == 2) {
+        containerthree.appendChild(card)
+    } 
+    
    }
 
 
@@ -136,6 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
  }
 
  function filterStars(e){
+    let contnum = 2
     console.log(e.target)
     console.log(state)
 
@@ -145,7 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
    let array = []
     for (let i = 0; i < globalData.length; i++) {
          for(let x = 0; x < globalData[i].activities.length; x++) {
-            if (globalData[i].activities[x].name == "Astronomy" || "Stargazing") {
+            if (globalData[i].activities[x].name == "Astronomy") {
                 array.push(globalData[i])
             }
                 
@@ -153,14 +160,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     console.log(array)
-     array.forEach((park) => appendCards(park))
+     array.forEach((park) => createCard(park, contnum))
 
 }
 
-function appendCards(park) {
-    console.log(park)
-    // containerthree.appendChild(card)
-}
+// function appendCards(park) {
+//     console.log(park)
+//     // containerthree.appendChild(card)
+// }
 
 
  function likedPark(e, like) {
