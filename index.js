@@ -1,18 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
-   let [button, form, container, parkinfo, stars, hiking, kayaking, camping, horseback, containerthree, containerfour] = document.querySelectorAll("#form, #stargazing, #container, #parkinfo, #containerthree, #containerfour, #parkbutton, #hiking, #camping, #kayaking, #horseback")
-   
+   let [button, form, container, parkinfo, stars, hiking, kayaking, camping, horseback] = document.querySelectorAll("#form, #stargazing, #container, #parkinfo, #parkbutton, #hiking, #camping, #kayaking, #horseback")
+//    let [button, form, container, parkinfo, stars, containerthree, containerfour, hiking, camping, kayaking, horseback] = document.querySelectorAll("#form, #stargazing, #container, #parkinfo, #containerthree, #containerfour, #parkbutton, #hiking, #camping, #kayaking, #horseback")
    console.log(button)
    console.log(form)
    console.log(container)
    console.log(parkinfo)
    console.log(stars)
-   console.log(containerthree)
-   console.log(containerfour)
+//    console.log(containerthree)
+//    console.log(containerfour)
    console.log(hiking)
    console.log(camping)
    console.log(kayaking)
    console.log(horseback)
-   
+
+   let containerthree = document.getElementById("containerthree")
+   let containerfour = document.getElementById("containerfour")
+
    button.addEventListener("click", (e) => {
     console.log(e.target)
     console.log("clicked")
@@ -28,10 +31,15 @@ document.addEventListener("DOMContentLoaded", () => {
     let globalData
     let state
     
-    
-    stars.addEventListener("click", (e) => {
-        console.log("starclick")
-        filterStars(e)})
+    let elements = [stars, hiking, camping, kayaking, horseback] 
+        elements.forEach(element => {
+         element.addEventListener('click', (e) => {
+        filterStars(e.target.id)
+            });
+        });
+    // stars.addEventListener("click", (e) => {
+    //     console.log("starclick")
+    //     filterStars(e)})
 
    parkinfo.addEventListener("click", (e) => { 
         parkinfo.className == "hidden" ? parkinfo.className = "nothidden" : parkinfo.className = "hidden"
@@ -147,18 +155,33 @@ document.addEventListener("DOMContentLoaded", () => {
     
  }
 
- function filterStars(e){
+ function filterStars(data){
+    console.log(data)
     let contnum = 2
-    console.log(e.target)
-    console.log(state)
-    console.log("star click")
-    // let newData = globalData.filter((park) => park.states == state)
-    // console.log(newData)
+    let name
+    switch (data) {
+        case "stargazing":
+            name = "Astronomy"
+            break
+        case "hiking":
+             name = "Hiking"
+             break
+        case "kayaking":
+             name = "Kayaking"
+            break
+        case "camping":
+            name = "Camping"
+            break
+        case "horseback":
+            name = "Horseback Riding"
+            break
+    }
+   console.log(name) 
     
    let array = []
     for (let i = 0; i < globalData.length; i++) {
          for(let x = 0; x < globalData[i].activities.length; x++) {
-            if (globalData[i].activities[x].name == "Astronomy") {
+            if (globalData[i].activities[x].name == name) {
                 array.push(globalData[i])
             }
                 
@@ -166,7 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     console.log(array)
-     array.forEach((park) => createCard(park, contnum))
+    array.forEach((park) => createCard(park, contnum))
 
 }
 
@@ -180,7 +203,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(e.target.parentNode)
     console.log("clicked")
     console.log(like)
-    //  let like = document.getElementById("star")
+    //  let like = document.getcontainerfourById("star")
      like.style.color = "green"
     let card = e.target.parentNode
    
@@ -196,13 +219,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 function toggleParks(e) {
-    console.log(e)
-    console.log("clicked")
-   if  (containerfour.className = "hidden") {
-    containerfour.className = "nothidden"
-   } else {
-    containerfour.className = "hidden"
-   }
+    // console.log(e)
+    console.log(containerfour.className)
+    if (containerfour.classList.contains("hidden")) {
+        containerfour.classList.remove("hidden");
+        containerfour.classList.add("nothidden");
+    } else {
+        containerfour.classList.remove("nothidden");
+        containerfour.classList.add("hidden");
+    }
+   console.log(containerfour.className)
 }
 
 
