@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-   let [button, form, container, parkinfo, stars, containerthree, containerfour] = document.querySelectorAll("#form, #stargazing, #container, #parkinfo, #containerthree, #containerfour, #parkbutton")
+   let [button, form, container, parkinfo, stars, hiking, kayaking, camping, horseback, containerthree, containerfour] = document.querySelectorAll("#form, #stargazing, #container, #parkinfo, #containerthree, #containerfour, #parkbutton, #hiking, #camping, #kayaking, #horseback")
    
    console.log(button)
    console.log(form)
@@ -8,6 +8,10 @@ document.addEventListener("DOMContentLoaded", () => {
    console.log(stars)
    console.log(containerthree)
    console.log(containerfour)
+   console.log(hiking)
+   console.log(camping)
+   console.log(kayaking)
+   console.log(horseback)
    
    button.addEventListener("click", (e) => {
     console.log(e.target)
@@ -25,7 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
     let state
     
     
-    stars.addEventListener("click", (e) => {filterStars(e)})
+    stars.addEventListener("click", (e) => {
+        console.log("starclick")
+        filterStars(e)})
 
    parkinfo.addEventListener("click", (e) => { 
         parkinfo.className == "hidden" ? parkinfo.className = "nothidden" : parkinfo.className = "hidden"
@@ -57,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(state)
         container.innerHTML = ' '
         if (data == "all") {
-            globalData.forEach((park) => createCard(park))
+            globalData.forEach((park) => createCard(park, contnum))
         } else{
         // container.innerHTML = ' '
         let label = document.getElementById("label")
@@ -145,7 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let contnum = 2
     console.log(e.target)
     console.log(state)
-
+    console.log("star click")
     // let newData = globalData.filter((park) => park.states == state)
     // console.log(newData)
     
@@ -190,6 +196,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 function toggleParks(e) {
+    console.log(e)
     console.log("clicked")
    if  (containerfour.className = "hidden") {
     containerfour.className = "nothidden"
