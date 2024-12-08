@@ -10,16 +10,9 @@
   </head>
   <body id="body" >
 
-<button id="parkbutton">Saved Parks</button>
+      <button id="parkbutton">Saved Parks</button>
 
 
-      <!-- offcanvas -->
-
-     
-     
-
-     
-      <!-- offcanvas -->
         <h1 id="title">Come Explore..</h1>
 <!-- carousel -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -50,12 +43,16 @@
     <!-- carousel -->
     <!-- form -->
      <form id="form">
-        <input id="input" type="text" name="search" value="type in a state abbreviation"></input>
+        <input id="input" type="text" name="search" value="type in a state abbreviation ex: TX OR type all for all Parks"></input>
         <input type="submit" value="submit"></input>
      </form>
-
+    <!-- form -->
       <h1 id="label">TOP PARKS IN TEXAS</h1>
+      <button id="left"class="left" onclick="leftScroll()">Left</button>
     <div id="container" class="containerone">
+      <!-- <button id="left"class="left" onclick="leftScroll()">Left</button> -->
+
+     
        <div id="card" class="card" >
         <span id="star">&#9733</span>
             <img id="cardimage" src="public.js/me.jpg" class="card-img-top" alt="card">
@@ -83,11 +80,15 @@
                     <p class="card-text">parkinfo</p>
                 </div>
        </div>
+       <!-- <button id="right" class="right" onclick="rightScroll()">Right</button> -->
      </div>
-<!-- form -->
+     <button id="right" class="right" >Right</button>
+     <!-- onclick="rightScroll() -->
+
       <div id="parkinfo" class="hidden">
 
         <div id="scroll" class="scrollable-div">
+         
     
        </div>
       

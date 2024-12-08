@@ -133,10 +133,11 @@
 }
 
 #container{
-    overflow-x: scroll;
+    overflow-x: hidden;
+    /* overflow-x: scroll; */
     overflow-y: hidden;
     white-space: nowrap;
-
+    -webkit-overflow-scrolling: touch; 
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
@@ -252,6 +253,31 @@
     width: 800px;
 }
 
+#infoimage2{
+    position: absolute;
+    top: 0px;
+    left: 100px;
+    height: 500px;
+    width: 800px;
+}
+
+#infoimage3{
+    position: absolute;
+    top: 0px;
+    left: 100px;
+    height: 500px;
+    width: 800px;
+}
+
+#infoimage4{
+    position: absolute;
+    top: 0px;
+    left: 100px;
+    height: 500px;
+    width: 800px;
+}
+
+
 #infotitle{
     position: absolute;
     /* position: absolute; */
@@ -284,7 +310,7 @@
 }
 
 #infoweather{
- position: absolute;
+    position: absolute;
     top: 250px;
     
     text-align: center;
@@ -348,3 +374,27 @@
 }
   
  
+#left{
+
+
+    height: 50px;
+    width: 100px;
+
+    position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+}
+
+#right{
+   
+    height: 50px;
+    width: 100px;
+
+    position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+}
