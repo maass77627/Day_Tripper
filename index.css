@@ -92,7 +92,7 @@
     height: 50px;
     width: 50px;
     position: absolute;
-    z-index: 2;
+    z-index: 1;
     color:rgb(4, 14, 0);
 }
 
@@ -375,26 +375,20 @@
   
  
 #left{
-
-
-    height: 50px;
+    height: 100px;
     width: 100px;
-
     position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-
-}
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    }
 
 #right{
-   
-    height: 50px;
+    /* transform: rotate(45deg); */
+    height: 100px;
     width: 100px;
-
     position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
