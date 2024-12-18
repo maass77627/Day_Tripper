@@ -363,7 +363,7 @@
     height: 1000px;
     width: 300px;
     z-index: 1;
-    background-color: teal;
+    background-color: rgb(249, 252, 252);
     /* background-color: rgb(138, 156, 156); */
 }
 
@@ -381,7 +381,7 @@
     width: 100px;
     position: absolute;
     left: 0;
-    top: 50%;
+    top: 500px;
     transform: translateY(-50%);
     }
 
