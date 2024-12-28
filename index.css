@@ -3,7 +3,7 @@
    /* height: 100%;
    overflow: hidden; 
    margin: 0; */ 
-   background-color: rgb(3, 46, 14);
+   background-color: rgb(1, 44, 16);
    /* background-color: rgb(146, 86, 131); */
     /* background-color: rgb(1, 1, 58); */
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
@@ -75,10 +75,9 @@
 #form{
     position: absolute; 
     border-radius: 20px;
-    
     z-index: 1;
-     left: 700px; 
-     top: 250px 
+    left: 700px; 
+    top: 250px 
 }
 
 
@@ -123,11 +122,9 @@
 
 #card{
     display: inline-block;
-
     margin-right: 20px;
-    /* float: left; */
-     position: relative; 
-     left: 0px;
+    position: relative; 
+    left: 0px;
     top: 50px;
     border-radius: 30px;
     height: 400px;
@@ -136,28 +133,24 @@
 
 #container{
     overflow-x: hidden;
-    /* overflow-x: scroll; */
     overflow-y: hidden;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch; 
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
-    /* left: 150px; */
     height: 500px;
     width: 1600px;
-    background-color: rgb(13, 80, 7);
-    /* background-color: rgb(1, 1, 58); */
+    background-color: rgb(134, 130, 134);
+    border-radius: 25px;
 }
 
 
 #containertwo{
-    /* position: absolute;  */
+   
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
-    /* top: 900px; */
-    /* left: 150px; */
     height: 300px;
     width: 1600px;
     background-color: rgb(3, 63, 3);
@@ -179,7 +172,7 @@
     height: 500px;
     width: 1600px;
     /* background-color: rgb(34, 70, 18); */
-    background-color: rgb(28, 71, 32);
+    background-color: rgb(58, 57, 58);
 }
 /* changed margin  */
 #stargazing{
