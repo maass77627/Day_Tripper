@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
    let [button, form, container, parkinfo, stars, hiking, kayaking, camping, horseback] = document.querySelectorAll("#form, #stargazing, #container, #parkinfo, #parkbutton, #hiking, #camping, #kayaking, #horseback")
-
    let containerthree = document.getElementById("containerthree")
    let containerfour = document.getElementById("containerfour")
 
@@ -16,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let globalData
     let state
-    
     let elements = [stars, hiking, camping, kayaking, horseback] 
         elements.forEach(element => {
          element.addEventListener('click', (e) => {

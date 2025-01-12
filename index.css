@@ -102,6 +102,7 @@
     left: 200px;
     top: 350px;
     z-index: 1;
+    color: white;
 }
 
 #label2{
@@ -109,7 +110,7 @@
     left: 200px;
     top: 850px;
     z-index: 1;
-
+    color: white;
 }
 
 #label3{
@@ -117,7 +118,7 @@
     left: 200px;
     top: 1260px;
     z-index: 1;
-    
+    color: white;
 }
 
 #card{
@@ -244,32 +245,40 @@
     position: absolute;
     top: 0px;
     left: 100px;
-    height: 500px;
-    width: 800px;
+    /* height: 500px;
+    width: 800px; */
+    height: 300px;
+    width: 400px;
 }
 
 #infoimage2{
     position: absolute;
     top: 0px;
-    left: 100px;
-    height: 500px;
-    width: 800px;
+    left: 450px;
+    height: 300px;
+    width: 400px;
+    /* height: 500px;
+    width: 800px; */
 }
 
 #infoimage3{
     position: absolute;
-    top: 0px;
+    top: 300px;
     left: 100px;
-    height: 500px;
-    width: 800px;
+    height: 300px;
+    width: 400px;
+    /* height: 500px;
+    width: 800px; */
 }
 
 #infoimage4{
     position: absolute;
     top: 0px;
     left: 100px;
-    height: 500px;
-    width: 800px;
+    height: 100px;
+    width: 200px;
+    /* height: 500px;
+    width: 800px; */
 }
 
 
