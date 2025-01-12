@@ -244,39 +244,39 @@
 #infoimage{
     position: absolute;
     top: 0px;
-    left: 100px;
+    left: 0px;
     /* height: 500px;
     width: 800px; */
-    height: 300px;
-    width: 400px;
+    height: 250px;
+    width: 450px;
 }
 
 #infoimage2{
     position: absolute;
     top: 0px;
     left: 450px;
-    height: 300px;
-    width: 400px;
+    height: 250px;
+    width: 450px;
     /* height: 500px;
     width: 800px; */
 }
 
 #infoimage3{
     position: absolute;
-    top: 300px;
-    left: 100px;
-    height: 300px;
-    width: 400px;
+    top: 250px;
+    left: 0px;
+    height: 250px;
+    width: 450px;
     /* height: 500px;
     width: 800px; */
 }
 
 #infoimage4{
     position: absolute;
-    top: 0px;
-    left: 100px;
-    height: 100px;
-    width: 200px;
+    top: 250px;
+    left: 450px;
+    height: 250px;
+    width: 450px;
     /* height: 500px;
     width: 800px; */
 }
