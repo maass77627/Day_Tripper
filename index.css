@@ -4,8 +4,6 @@
    overflow: hidden; 
    margin: 0; */ 
    background-color: rgb(1, 44, 16);
-   /* background-color: rgb(146, 86, 131); */
-    /* background-color: rgb(1, 1, 58); */
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
 
@@ -163,19 +161,17 @@
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
-    /* position: absolute; */
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 100px;
-    /* top: 1300px; */
-    /* left: 150px; */
+   
     height: 500px;
     width: 1600px;
-    /* background-color: rgb(34, 70, 18); */
+   
     background-color: rgb(12, 59, 24);
 }
-/* changed margin  */
+
 #stargazing{
     position: absolute;
     left: 200px;
@@ -245,8 +241,6 @@
     position: absolute;
     top: 0px;
     left: 0px;
-    /* height: 500px;
-    width: 800px; */
     height: 250px;
     width: 450px;
 }
@@ -257,8 +251,7 @@
     left: 450px;
     height: 250px;
     width: 450px;
-    /* height: 500px;
-    width: 800px; */
+   
 }
 
 #infoimage3{
@@ -267,8 +260,7 @@
     left: 0px;
     height: 250px;
     width: 450px;
-    /* height: 500px;
-    width: 800px; */
+    
 }
 
 #infoimage4{
@@ -277,14 +269,13 @@
     left: 450px;
     height: 250px;
     width: 450px;
-    /* height: 500px;
-    width: 800px; */
+   
 }
 
 
 #infotitle{
     position: absolute;
-    /* position: absolute; */
+    
     left: 450px;
     z-index: 1;
 }
@@ -358,15 +349,11 @@
     position: absolute;
     top: 0px;
     left: 0px;
-    
-    /* margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto; */
     height: 1000px;
     width: 300px;
     z-index: 1;
     background-color: rgb(249, 252, 252);
-    /* background-color: rgb(138, 156, 156); */
+   
 }
 
 #parkbutton{
@@ -394,5 +381,4 @@
     position: absolute;
     right: 0;
     top: 50%;
-    /* transform: translateY(-50%); */
 }
