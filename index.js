@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     form.addEventListener("submit", (e) => {
         e.preventDefault()
-        console.log("clicked")
         filter(e.target.input.value)
     })
 
@@ -30,16 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((response) => response.json())
     .then((json) => { 
         console.log(json)
-        console.log(json.data[0].states)
-        console.log(json.data[0].entranceFees)
-        console.log(json.data[0].operatingHours)
-        console.log(json.data[0].activities)
-        console.log(json.data[0].activities[0].name)
-        console.log(json.data[0].fullName)
-        console.log(json.data[0].images)
-        console.log(json.data[0].images[0].url)
-        console.log(json.data[0])
-        console.log(json.data)
         globalData = json.data
         
 })
@@ -47,26 +36,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function filter(data) {
         let contnum = 1
-        console.log(data)
         state = data
-        console.log(state)
         container.innerHTML = ' '
         if (data == "all") {
             globalData.forEach((park) => createCard(park, contnum))
         } else{
-        // container.innerHTML = ' '
         let label = document.getElementById("label")
         label.innerText = `Top parks in ${data}`
         let parks = globalData.filter((park) => park.states == data)
-       parks.forEach((park) => createCard(park, contnum))
+        parks.forEach((park) => createCard(park, contnum))
         }
     }
 
  function createCard(park, contnum) {
-    console.log(contnum)
-    console.log(state)
-    console.log(container)
-    console.log(park)
    let card = document.createElement("div")
     card.className = "card"
     card.id = "card"
@@ -91,7 +73,6 @@ document.addEventListener("DOMContentLoaded", () => {
     like.innerHTML = "&#9733"
     like.addEventListener("click", (e) => {likedPark(e, like)})
     card.appendChild(like)
-    // card.addEventListener("click", (e) => getCardInfo(e, park))
     if (contnum == 1){
      container.appendChild(card)
     } else if (contnum == 2) {
@@ -138,7 +119,6 @@ document.addEventListener("DOMContentLoaded", () => {
 }
 
  function filterActivities(data){
-    console.log(data)
     containerthree.innerHTML = " "
     let contnum = 2
     let name
@@ -159,7 +139,6 @@ document.addEventListener("DOMContentLoaded", () => {
             name = "Horseback Riding"
             break
     }
-   console.log(name) 
     
    let array = []
     for (let i = 0; i < globalData.length; i++) {
@@ -172,7 +151,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     let label = document.getElementById("label3")
     label.innerText = `Best parks for ${name}`
-    console.log(array)
     array.forEach((park) => createCard(park, contnum))
 
 }
@@ -180,23 +158,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
  function likedPark(e, like) {
-    console.log(e.target)
-    console.log(e.target.parentNode)
-    console.log("clicked")
-    console.log(like)
-    //  let like = document.getcontainerfourById("star")
      like.style.color = "green"
     let newcard = e.target.parentNode
     containerfour.appendChild(newcard)
-   
-    
- }
+   }
 
 
 
 function toggleParks(e) {
-    // console.log(e)
-    console.log(containerfour.className)
     if (containerfour.classList.contains("hidden")) {
         containerfour.classList.remove("hidden");
         containerfour.classList.add("nothidden");
@@ -204,13 +173,13 @@ function toggleParks(e) {
         containerfour.classList.remove("nothidden");
         containerfour.classList.add("hidden");
     }
-   console.log(containerfour.className)
 }
 
 let leftbutton = document.getElementById("left")
 leftbutton.addEventListener("click", (e) => leftScroll())
 let rightbutton = document.getElementById("right")
 rightbutton.addEventListener("click", (e) => rightScroll())
+
 
 function leftScroll() {
     const left = document.querySelector("#container");

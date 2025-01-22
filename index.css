@@ -1,9 +1,5 @@
 #body {
-     /* width: 100%; */
-   /* height: 100%;
-   overflow: hidden; 
-   margin: 0; */ 
-   background-color: rgb(1, 44, 16);
+    background-color: rgb(1, 44, 16);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
 
@@ -21,13 +17,10 @@
     margin-top: 0px;
     margin-left: auto;
     margin-right: auto;
-    
-    
-}
+    }
 
 
 .carousel-indicators {
-    
     margin-top: 0px;
     margin-left: auto;
     margin-right: auto;
@@ -40,8 +33,7 @@
     height: 300px;
     width: 1400px;
     background-color: rgb(4, 51, 12);
-    
-}
+    }
 
 
 
@@ -50,24 +42,21 @@
      left: 0px; 
     height: 300px;
     width: 1400px;
-    
-}
+    }
 
 #img2{
      position: absolute;
      left: 0px; 
     height: 300px;
     width: 1400px;
-   
-}
+   }
 
 #img3{
     position: absolute; 
     left: 0px; 
     height: 300px;
     width: 1400px;
-   
-}
+   }
 
 
 #form{
@@ -165,10 +154,8 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 100px;
-   
     height: 500px;
     width: 1600px;
-   
     background-color: rgb(12, 59, 24);
 }
 
@@ -183,7 +170,7 @@
 #hiking{
     position: absolute;
     left: 500px;
-     border-radius: 50%; 
+    border-radius: 50%; 
     width: 300px;
     height: 300px;
 }
@@ -275,7 +262,6 @@
 
 #infotitle{
     position: absolute;
-    
     left: 450px;
     z-index: 1;
 }
@@ -307,15 +293,8 @@
 #infoweather{
     position: absolute;
     top: 250px;
-    
     text-align: center;
 }
-
-
-
-
-
-
 
 #infohours{
     position: absolute;
@@ -324,8 +303,6 @@
     text-align: center;
 
 }
-
-
 
 .scrollable-div {
     width: 700px;
@@ -341,9 +318,7 @@
     top: 0px;
     right: 0px;
     z-index: 2;
-    
-    
-}
+    }
 
 #containerfour {
     position: absolute;
