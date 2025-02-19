@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+// document.addEventListener("DOMContentLoaded", () => {
    let [button, form, container, parkinfo, stars, hiking, kayaking, camping, horseback] = document.querySelectorAll("#form, #stargazing, #container, #parkinfo, #parkbutton, #hiking, #camping, #kayaking, #horseback")
    let containerthree = document.getElementById("containerthree")
    let containerfour = document.getElementById("containerfour")
@@ -196,4 +196,4 @@ function leftScroll() {
 
 
 
-})
+// })
