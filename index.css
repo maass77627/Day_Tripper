@@ -5,7 +5,7 @@
 
 #title{
     position: absolute;
-    top: 25px;
+    top: 150px;
     left: 500px;
     font-size: 80px;
     color: white;
@@ -64,7 +64,7 @@
     border-radius: 20px;
     z-index: 1;
     left: 700px; 
-    top: 250px 
+    top: 550px 
 }
 
 
@@ -87,7 +87,7 @@
 #label{
     position: absolute;
     left: 200px;
-    top: 350px;
+    top: 600px;
     z-index: 1;
     color: white;
 }
@@ -95,15 +95,23 @@
 #label2{
     position: absolute;
     left: 200px;
-    top: 850px;
+    top: 1120px;
     z-index: 1;
     color: white;
+}
+
+#smalllabel{
+    position: absolute;
+     left: 1400px; 
+     top: 600px;
+    color: white;
+    font-size: 20px;
 }
 
 #label3{
     position: absolute;
     left: 200px;
-    top: 1260px;
+    top: 1490px;
     z-index: 1;
     color: white;
 }
@@ -266,10 +274,28 @@
     z-index: 1;
 }
 
+#hikinglabel{
+    position: absolute;
+    margin-top: 90px;
+    margin-left: 400px;
+    color: white;
+    font-size: 25px;
+    z-index: 3;
+}
+
 #iframe{
     position: absolute;
     top: 1000px;
     left: 500px;
+}
+
+#starlabel {
+    position: absolute;
+    margin-top: 90px;
+    margin-left: 80px;
+    color: white;
+    font-size: 25px;
+    z-index: 3;
 }
 
 .hidden{
@@ -333,8 +359,8 @@
 
 #parkbutton{
     position: absolute;
-    right: 950px;
-    top: 350px;
+    right: 200px;
+    top: 50px;
     height: 50px;
     width: 100px;
 }
@@ -345,7 +371,7 @@
     width: 100px;
     position: absolute;
     left: 0;
-    top: 500px;
+    top: 800px;
     transform: translateY(-50%);
     }
 
@@ -355,5 +381,15 @@
     width: 100px;
     position: absolute;
     right: 0;
-    top: 50%;
+    top: 80%;
+}
+
+#logo{
+    /* position: absolute */
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    z-index: 5;
+    margin-left: 50px;
+    margin-top:50px;
 }

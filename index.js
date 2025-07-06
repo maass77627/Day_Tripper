@@ -48,11 +48,11 @@
         }
     }
 
- function createCard(park, contnum) {
-   let card = document.createElement("div")
-    card.className = "card"
-    card.id = "card"
-    card.innerHTML = `
+    function createCard(park, contnum) {
+        let card = document.createElement("div")
+        card.className = "card"
+        card.id = "card"
+        card.innerHTML = `
                 <div id="card-body" class="card-body">
                     <h5 class="card-title">${park.name}</h5>
                     <h6 class="card-subtitle mb-2 text-body-secondary">${park.states}</h6>
@@ -60,24 +60,24 @@
                 </div>
     `
     
-    let image = document.createElement("img")
-    image.id = "cardimage"
-    image.src = `${park.images[0].url}`
-    image.className = "card-img-top"
-    image.addEventListener("click", (e) => getCardInfo(e, park))
-    card.appendChild(image)
+         let image = document.createElement("img")
+         image.id = "cardimage"
+         image.src = `${park.images[0].url}`
+         image.className = "card-img-top"
+         image.addEventListener("click", (e) => getCardInfo(e, park))
+         card.appendChild(image)
 
-    let like = document.createElement("span")
-    like.id = "star"
-    like.className = "fa fa-star"
-    like.innerHTML = "&#9733"
-    like.addEventListener("click", (e) => {likedPark(e, like)})
-    card.appendChild(like)
-    if (contnum == 1){
-     container.appendChild(card)
-    } else if (contnum == 2) {
+         let like = document.createElement("span")
+         like.id = "star"
+         like.className = "fa fa-star"
+         like.innerHTML = "&#9733"
+         like.addEventListener("click", (e) => {likedPark(e, like)})
+         card.appendChild(like)
+        if (contnum == 1){
+        container.appendChild(card)
+        } else if (contnum == 2) {
         containerthree.appendChild(card)
-    } 
+        } 
     
    }
 
