@@ -199,6 +199,25 @@
     height: 300px;
 }
 
+#camplabel{
+    position: absolute;
+    margin-top: 90px;
+    margin-left: 1000px;
+    color: white;
+    font-size: 25px;
+    z-index: 3;
+}
+
+#horselabel{
+    position: absolute;
+    margin-top: 90px;
+    margin-left: 1400px;
+    color: white;
+    font-size: 25px;
+    z-index: 3;
+
+}
+
 #horseback{
     position: absolute;
     left: 1400px;
@@ -298,6 +317,15 @@
     z-index: 3;
 }
 
+#kayaklabel {
+    position: absolute;
+    margin-top: 90px;
+    margin-left: 700px;
+    color: white;
+    font-size: 25px;
+    z-index: 3;
+}
+
 .hidden{
     visibility: hidden;
 }
@@ -329,6 +357,8 @@
     text-align: center;
 
 }
+
+
 
 .scrollable-div {
     width: 700px;
