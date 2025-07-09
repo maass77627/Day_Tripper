@@ -30,6 +30,8 @@
     .then((json) => { 
         console.log(json)
         globalData = json.data
+        //  globalData.forEach((park) => createCard(park))
+        filter("all")
         
 })
 
@@ -40,12 +42,13 @@
         container.innerHTML = ' '
         if (data == "all") {
             globalData.forEach((park) => createCard(park, contnum))
+            label.innerText = `Top parks in The U.S.`
         } else{
         let label = document.getElementById("label")
         label.innerText = `Top parks in ${data}`
         let parks = globalData.filter((park) => park.states == data)
         parks.forEach((park) => createCard(park, contnum))
-        }
+         }
     }
 
     function createCard(park, contnum) {
