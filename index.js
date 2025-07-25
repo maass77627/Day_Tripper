@@ -111,12 +111,12 @@
     
     let p = document.createElement("p")
     p.id="infoactivities"
-    p.innerText = "Activities: \n"
+    p.innerText = `Activities: \n`
     park.activities.forEach((activity) => {
        p.innerText += " " + activity.name + ", "
     })
-    scroller.appendChild(p3)
-    scroller.appendChild(p2)
+     scroller.appendChild(p3)
+     scroller.appendChild(p2)
      scroller.appendChild(p)
      parkinfo.appendChild(scroller)
 }

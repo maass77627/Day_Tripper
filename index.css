@@ -1,15 +1,23 @@
 #body {
-    background-color: rgb(1, 44, 16);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+    background-color: white;
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif */
+    font-family: sans-serif;
+    border-color: dark grey;
+    border-style: solid;
+    border-radius: 25px;
+    border: 3px;
+
+
 }
 
 #title{
     position: absolute;
-    top: 150px;
+    top: 200px;
     left: 500px;
     font-size: 80px;
-    color: white;
+    color: orange;
     z-index: 1;
+    opacity: 80%;
 }
 
 
@@ -81,39 +89,43 @@
     width: 50px;
     position: absolute;
     z-index: 1;
-    color:rgb(4, 14, 0);
+    color:grey;
 }
 
 #label{
     position: absolute;
     left: 200px;
-    top: 600px;
+    top: 650px;
     z-index: 1;
-    color: white;
+    color: orange;
+    opacity: 80%;
 }
 
 #label2{
     position: absolute;
     left: 200px;
-    top: 1120px;
+    top: 1170px;
     z-index: 1;
-    color: white;
+    color: orange;
+    opacity: 80%;
 }
 
 #smalllabel{
     position: absolute;
      left: 1400px; 
      top: 600px;
-    color: white;
+    color: orange;
     font-size: 20px;
+    opacity: 80%;
 }
 
 #label3{
     position: absolute;
     left: 200px;
-    top: 1490px;
+    top: 1540px;
     z-index: 1;
-    color: white;
+    color: orange;
+    opacity: 80%;
 }
 
 #card{
@@ -122,6 +134,8 @@
     position: relative; 
     left: 0px;
     top: 50px;
+    border-style: solid;
+    border-color: green;
     border-radius: 30px;
     height: 400px;
     width: 300px;
@@ -137,7 +151,7 @@
     margin-right: auto;
     height: 500px;
     width: 1600px;
-    background-color: rgb(2, 70, 6);
+    background-color: light grey;
     border-radius: 25px;
 }
 
@@ -149,7 +163,7 @@
     margin-right: auto;
     height: 300px;
     width: 1600px;
-    background-color: rgb(3, 63, 3);
+    background-color: light grey;
 
 }
 
@@ -164,7 +178,7 @@
     margin-bottom: 100px;
     height: 500px;
     width: 1600px;
-    background-color: rgb(12, 59, 24);
+    background-color: white;
 }
 
 #stargazing{
@@ -383,7 +397,8 @@
     height: 1000px;
     width: 300px;
     z-index: 1;
-    background-color: rgb(249, 252, 252);
+    /* background-color: rgb(249, 252, 252); */
+    background-color: pink;
    
 }
 
@@ -416,8 +431,8 @@
 
 #logo{
     /* position: absolute */
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 250px;
     border-radius: 50%;
     z-index: 5;
     margin-left: 50px;
