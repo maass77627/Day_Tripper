@@ -217,7 +217,8 @@
     position: absolute;
     margin-top: 90px;
     margin-left: 1000px;
-    color: white;
+    color: green;
+    font-weight: bold;
     font-size: 25px;
     z-index: 3;
 }
@@ -226,7 +227,8 @@
     position: absolute;
     margin-top: 90px;
     margin-left: 1400px;
-    color: white;
+    color: green;
+    font-weight: bold;
     font-size: 25px;
     z-index: 3;
 
@@ -311,7 +313,8 @@
     position: absolute;
     margin-top: 90px;
     margin-left: 400px;
-    color: white;
+    color: green;
+    font-weight: bold;
     font-size: 25px;
     z-index: 3;
 }
@@ -326,7 +329,8 @@
     position: absolute;
     margin-top: 90px;
     margin-left: 80px;
-    color: white;
+    color: green;
+    font-weight: bold;
     font-size: 25px;
     z-index: 3;
 }
@@ -335,7 +339,8 @@
     position: absolute;
     margin-top: 90px;
     margin-left: 700px;
-    color: white;
+    color: green;
+    font-weight: bold;
     font-size: 25px;
     z-index: 3;
 }
