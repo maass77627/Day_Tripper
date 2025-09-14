@@ -17,6 +17,7 @@
     let elements = [stars, hiking, camping, kayaking, horseback] 
         elements.forEach(element => {
          element.addEventListener('click', (e) => {
+            // element.className = "hvr-grow"
         filterActivities(e.target.id)
             });
         });
@@ -53,8 +54,9 @@
 
     function createCard(park, contnum) {
         let card = document.createElement("div")
-        card.className = "card"
-        card.id = "card"
+        card.className = "hvr-grow-shadow"
+        //  card.className = "card"
+         card.id = "card"
         card.innerHTML = `
                 <div id="card-body" class="card-body">
                     <h5 class="card-title">${park.name}</h5>
@@ -62,7 +64,6 @@
                     <p class="card-text">"this is a park"</p>
                 </div>
     `
-    
          let image = document.createElement("img")
          image.id = "cardimage"
          image.src = `${park.images[0].url}`
@@ -71,6 +72,13 @@
          card.appendChild(image)
 
          let like = document.createElement("span")
+         like.addEventListener("mouseover", () => {
+            like.style.color = "yello";
+          });
+          
+          like.addEventListener("mouseout", () => {
+            like.style.color = "pink";
+          });
          like.id = "star"
          like.className = "fa fa-star"
          like.innerHTML = "&#9733"
