@@ -41,6 +41,7 @@
         let contnum = 1
         state = data
         container.innerHTML = ' '
+        globalData.forEach((park) => createCard(park, contnum))
         if (data == "all") {
             globalData.forEach((park) => createCard(park, contnum))
             label.innerText = `Top parks in The U.S.`
@@ -55,8 +56,7 @@
     function createCard(park, contnum) {
         let card = document.createElement("div")
         card.className = "hvr-grow-shadow"
-        //  card.className = "card"
-         card.id = "card"
+        card.id = "card"
         card.innerHTML = `
                 <div id="card-body" class="card-body">
                     <h5 class="card-title">${park.name}</h5>
@@ -73,7 +73,7 @@
 
          let like = document.createElement("span")
          like.addEventListener("mouseover", () => {
-            like.style.color = "yello";
+            like.style.color = "yellow";
           });
           
           like.addEventListener("mouseout", () => {
@@ -130,7 +130,7 @@
 }
 
  function filterActivities(data){
-    containerthree.innerHTML = " "
+    containerthree.innerHTML = filter("")
     let contnum = 2
     let name
     switch (data) {

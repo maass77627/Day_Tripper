@@ -185,6 +185,7 @@
     height: 500px;
     width: 1600px;
     background-color: white;
+    scrollbar-width: none;
 }
 
 #stargazing{
@@ -363,7 +364,7 @@
 
 #infoactivities{
     position: absolute;
-    top: 500px;
+    top: 450px;
     left: 150px;
     height: 100px;
     width: 400px;
