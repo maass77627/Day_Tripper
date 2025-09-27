@@ -90,7 +90,9 @@
         containerthree.appendChild(card)
         } 
     
-   }
+    }
+
+    // d
 
 
  function getCardInfo(e, park) {
