@@ -28,7 +28,7 @@ For more examples, please refer to the Documentation
 Contact
 Kelly Maass  - kmaass77627@gmail.com
 
-Project Link: [https://github.com/maass77627/repo_name](https://github.com/maass77627/Day_Tripper)
+Project Link: (https://github.com/maass77627/Day_Tripper)
 
 (back to top)
 
