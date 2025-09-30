@@ -20,7 +20,7 @@ Prerequisites
 Navigate to index.html file right click and choose reveal in explorer
 
 Usage
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+utilized bootstrao, hover.css etc..
 
 For more examples, please refer to the Documentation
 
