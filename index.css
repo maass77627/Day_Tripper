@@ -147,8 +147,20 @@
   overflow-wrap: break-word;
 }
 
+/* overflow-x: scroll;
+overflow-y: hidden;
+white-space: nowrap;
+margin-top: 50px;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 100px;
+height: 500px;
+width: 1600px;
+background-color: white;
+scrollbar-width: none; */
+
 #container{
-    overflow-x: hidden;
+    overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch; 
@@ -159,6 +171,8 @@
     width: 1600px;
     background-color: light grey;
     border-radius: 25px;
+    scrollbar-width: none;
+
 }
 
 
