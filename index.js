@@ -31,17 +31,18 @@
     .then((json) => { 
         console.log(json)
         globalData = json.data
-        //  globalData.forEach((park) => createCard(park))
-        filter("all")
+       //   globalData.forEach((park) => createCard(park))
+         filter("all")
         
 })
 
 
     function filter(data) {
+        console.log(data)
         let contnum = 1
         state = data
         container.innerHTML = ' '
-        globalData.forEach((park) => createCard(park, contnum))
+        // globalData.forEach((park) => createCard(park, contnum))
         if (data == "all") {
             globalData.forEach((park) => createCard(park, contnum))
             label.innerText = `Top parks in The U.S.`
@@ -49,11 +50,16 @@
         let label = document.getElementById("label")
         label.innerText = `Top parks in ${data}`
         let parks = globalData.filter((park) => park.states == data)
+        console.log(parks)
+        console.log(data)
+        console.log(state)
         parks.forEach((park) => createCard(park, contnum))
          }
     }
 
     function createCard(park, contnum) {
+        console.log(park)
+        console.log(contnum)
         let card = document.createElement("div")
         card.className = "hvr-grow-shadow"
         card.id = "card"
@@ -188,20 +194,20 @@ function toggleParks(e) {
     }
 }
 
-let leftbutton = document.getElementById("left")
-leftbutton.addEventListener("click", (e) => leftScroll())
-let rightbutton = document.getElementById("right")
-rightbutton.addEventListener("click", (e) => rightScroll())
+// let leftbutton = document.getElementById("left")
+// leftbutton.addEventListener("click", (e) => leftScroll())
+// let rightbutton = document.getElementById("right")
+// rightbutton.addEventListener("click", (e) => rightScroll())
 
 
-function leftScroll() {
-    const left = document.querySelector("#container");
-    left.scrollBy(200, 0);
-  }
-  function rightScroll() {
-    const right = document.querySelector("#container");
-    right.scrollBy(-200, 0);
-  }
+// function leftScroll() {
+//     const left = document.querySelector("#container");
+//     left.scrollBy(200, 0);
+//   }
+//   function rightScroll() {
+//     const right = document.querySelector("#container");
+//     right.scrollBy(-200, 0);
+//   }
 
 
 
