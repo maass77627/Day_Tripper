@@ -105,7 +105,7 @@
 #label2{
     position: absolute;
     left: 200px;
-    top: 1170px;
+    top: 1100px;
     z-index: 1;
     color: orange;
     opacity: 80%;
@@ -203,9 +203,10 @@ scrollbar-width: none; */
 }
 
 #stargazing{
+    opacity: 0.5;
     position: absolute;
     left: 200px;
-     border-radius: 50%; 
+    border-radius: 50%; 
     width: 300px;
     height: 300px;
 }
@@ -218,10 +219,14 @@ scrollbar-width: none; */
     height: 300px;
 }
 
+#hiking:hover{
+    opacity: 0.9;
+}
+
 #kayaking{
     position: absolute;
     left: 800px;
-     border-radius: 50%; 
+    border-radius: 50%; 
     width: 300px;
     height: 300px;
 }
@@ -298,6 +303,7 @@ scrollbar-width: none; */
 }
 
 #infoimage2{
+    /* opacity: 0.5; */
     position: absolute;
     top: 0px;
     left: 450px;
@@ -349,9 +355,9 @@ scrollbar-width: none; */
 
 #starlabel {
     position: absolute;
-    margin-top: 90px;
+    margin-top: 60px;
     margin-left: 80px;
-    color: rgb(245, 252, 252);
+    color: rgb(253, 255, 255);
     font-weight: bold;
     font-size: 25px;
     z-index: 3;
@@ -379,9 +385,9 @@ scrollbar-width: none; */
 #infoactivities{
     position: absolute;
     top: 450px;
-    left: 150px;
-    height: 100px;
-    width: 400px;
+    /* left: 150px; */
+    /* height: 100px; */
+    /* width: 400px; */
     text-align: center;
 }
 
@@ -397,6 +403,12 @@ scrollbar-width: none; */
     left: 265px;
     text-align: center;
 
+}
+
+#infodetails{
+    position: absolute;
+    top: 700px;
+    text-align: center;
 }
 
 

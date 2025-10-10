@@ -17,7 +17,6 @@
     let elements = [stars, hiking, camping, kayaking, horseback] 
         elements.forEach(element => {
          element.addEventListener('click', (e) => {
-            // element.className = "hvr-grow"
         filterActivities(e.target.id)
             });
         });
@@ -50,16 +49,11 @@
         let label = document.getElementById("label")
         label.innerText = `Top parks in ${data}`
         let parks = globalData.filter((park) => park.states == data)
-        console.log(parks)
-        console.log(data)
-        console.log(state)
         parks.forEach((park) => createCard(park, contnum))
          }
     }
 
     function createCard(park, contnum) {
-        console.log(park)
-        console.log(contnum)
         let card = document.createElement("div")
         card.className = "hvr-grow-shadow"
         card.id = "card"
@@ -67,7 +61,7 @@
                 <div id="card-body" class="card-body">
                     <h5 class="card-title">${park.name}</h5>
                     <h6 class="card-subtitle mb-2 text-body-secondary">${park.states}</h6>
-                    <p class="card-text">"this is a park"</p>
+                    
                 </div>
     `
          let image = document.createElement("img")
@@ -117,6 +111,11 @@
             <img id="infoimage3" src="${park.images[2].url}"></img>
             <img id="infoimage4" src="${park.images[3].url}"></img>
     `
+
+    let p4 = document.createElement("p")
+    p4.id = "infodetails"
+    p4.innerText = `Description: \n ${park.description}`
+
     let p3 = document.createElement("p")
     p3.id = "infoweather"
     p3.innerText = `Weather Info: \n ${park.weatherInfo}`
@@ -131,6 +130,7 @@
     park.activities.forEach((activity) => {
        p.innerText += " " + activity.name + ", "
     })
+     scroller.appendChild(p4)
      scroller.appendChild(p3)
      scroller.appendChild(p2)
      scroller.appendChild(p)
