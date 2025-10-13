@@ -3,6 +3,7 @@
    let containerthree = document.getElementById("containerthree")
    let containerfour = document.getElementById("containerfour")
 
+
    button.addEventListener("click", (e) => {
     toggleParks(e)
 })
@@ -33,15 +34,21 @@
        //   globalData.forEach((park) => createCard(park))
          filter("all")
         
+        
+        
 })
+
+// let contnum = 1
 
 
     function filter(data) {
         console.log(data)
-        let contnum = 1
+        // console.log(contnum)
+         let contnum = 1
         state = data
-        container.innerHTML = ' '
-        // globalData.forEach((park) => createCard(park, contnum))
+        container.innerHTML = ''
+        // contnum == 1 ? container.innerHTML = ' ' : container.innerHTML
+        
         if (data == "all") {
             globalData.forEach((park) => createCard(park, contnum))
             label.innerText = `Top parks in The U.S.`
@@ -54,6 +61,11 @@
     }
 
     function createCard(park, contnum) {
+        // console.log(container.innerHTML)
+        // console.log(containerthree.innerHTML)
+        // console.log(contnum)
+        // console.log(park)
+        // console.log(container.innerHTML)
         let card = document.createElement("div")
         card.className = "hvr-grow-shadow"
         card.id = "card"
@@ -87,6 +99,7 @@
         if (contnum == 1){
         container.appendChild(card)
         } else if (contnum == 2) {
+            
         containerthree.appendChild(card)
         } 
     
@@ -130,6 +143,12 @@
     park.activities.forEach((activity) => {
        p.innerText += " " + activity.name + ", "
     })
+    console.log(p.innerHTML.length)
+   p.innerHTML.length > 310 ? p.innerHTML = p.innerHTML.slice(0, 310) : p;
+      console.log(p.innerHTML.length)
+      console.log(p.innerHTML)
+
+      
      scroller.appendChild(p4)
      scroller.appendChild(p3)
      scroller.appendChild(p2)
@@ -140,6 +159,7 @@
  function filterActivities(data){
     containerthree.innerHTML = filter("")
     let contnum = 2
+    
     let name
     switch (data) {
         case "stargazing":
@@ -193,6 +213,49 @@ function toggleParks(e) {
         containerfour.classList.add("hidden");
     }
 }
+
+
+// function createCardTwo(park, contnum) {
+//     console.log(contnum)
+//     console.log(park)
+//     console.log(container.innerHTML)
+//     let cardtwo = document.createElement("div")
+//     cardtwo.className = "hvr-grow-shadow"
+//     cardtwo.id = "card"
+//     cardtwo.innerHTML = `
+//             <div id="card-body" class="card-body">
+//                 <h5 class="card-title">${park.name}</h5>
+//                 <h6 class="card-subtitle mb-2 text-body-secondary">${park.states}</h6>
+                
+//             </div>
+// `
+//      let imagetwo = document.createElement("img")
+//      imagetwo.id = "cardimage"
+//      imagetwo.src = `${park.images[0].url}`
+//      imagetwo.className = "card-img-top"
+//      imagetwo.addEventListener("click", (e) => getCardInfo(e, park))
+//      cardtwo.appendChild(imagetwo)
+
+//      let liketwo = document.createElement("span")
+//      liketwo.addEventListener("mouseover", () => {
+//         liketwo.style.color = "yellow";
+//       });
+      
+//       liketwo.addEventListener("mouseout", () => {
+//         liketwo.style.color = "pink";
+//       });
+//      liketwo.id = "star"
+//      liketwo.className = "fa fa-star"
+//      liketwo.innerHTML = "&#9733"
+//      liketwo.addEventListener("click", (e) => {likedPark(e, liketwo)})
+//      cardtwo.appendChild(liketwo)
+//     // if (contnum == 1){
+//     // container.appendChild(card)
+//     // } else if (contnum == 2) {
+//     containerthree.appendChild(cardtwo)
+//     // } 
+
+// }
 
 // let leftbutton = document.getElementById("left")
 // leftbutton.addEventListener("click", (e) => leftScroll())
