@@ -1,11 +1,11 @@
-#body {
+ #body {
     background-color: white;
-    font-family: sans-serif;
+    font-family: 'Inter', sans-serif;
+    /* font-family: sans-serif; */
     border-color: dark grey;
     border-style: solid;
     border-radius: 25px;
     border: 3px;
-
 
 }
 
@@ -19,51 +19,33 @@
     opacity: 80%;
 }
 
+#carousel-section {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .carousel-item {
+    height: 400px; 
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+  }
+  
+  .carousel-caption {
+    background: rgba(0, 0, 0, 0.5); 
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .carousel-caption h5, 
+  .carousel-caption p {
+    color: white;
+  }
 
-#myCarousel {
-    margin-top: 0px;
-    margin-left: auto;
-    margin-right: auto;
-    }
 
-
-.carousel-indicators {
-    margin-top: 0px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.carousel-item {
-    margin-top: 0px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 300px;
-    width: 1400px;
-    background-color: rgb(4, 51, 12);
-    }
-
-
-
-#img1{
-     position: absolute; 
-     left: 0px; 
-    height: 300px;
-    width: 1400px;
-    }
-
-#img2{
-     position: absolute;
-     left: 0px; 
-    height: 300px;
-    width: 1400px;
-   }
-
-#img3{
-    position: absolute; 
-    left: 0px; 
-    height: 300px;
-    width: 1400px;
-   }
 
 
 #form{
@@ -71,16 +53,14 @@
     border-radius: 20px;
     z-index: 1;
     left: 700px; 
-    top: 550px 
+    top: 400px 
 }
-
 
 #input{
     border-radius: 50px;
     height: 75px;
     width: 500px;
 }
-
 
 
 #star{
@@ -96,7 +76,7 @@
 #label{
     position: absolute;
     left: 200px;
-    top: 650px;
+    top: 450px;
     z-index: 1;
     color: orange;
     opacity: 80%;
@@ -105,7 +85,7 @@
 #label2{
     position: absolute;
     left: 200px;
-    top: 1100px;
+    top: 950px;
     z-index: 1;
     color: orange;
     opacity: 80%;
@@ -123,7 +103,7 @@
 #label3{
     position: absolute;
     left: 200px;
-    top: 1540px;
+    top: 1400px;
     z-index: 1;
     color: orange;
     opacity: 80%;
@@ -142,29 +122,19 @@
     width: 300px;
 
     /* margin: 0; */
-  word-wrap: break-word;   
+  /* word-wrap: break-word;    */
   white-space: normal;           
   overflow-wrap: break-word;
 }
 
-/* overflow-x: scroll;
-overflow-y: hidden;
-white-space: nowrap;
-margin-top: 50px;
-margin-left: auto;
-margin-right: auto;
-margin-bottom: 100px;
-height: 500px;
-width: 1600px;
-background-color: white;
-scrollbar-width: none; */
+
 
 #container{
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch; 
-    margin-top: 50px;
+    margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
     height: 500px;
@@ -174,7 +144,6 @@ scrollbar-width: none; */
     scrollbar-width: none;
 
 }
-
 
 #containertwo{
    
@@ -191,12 +160,11 @@ scrollbar-width: none; */
     font-weight: bold;
 }
 
-
 #containerthree{
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
-    margin-top: 50px;
+    margin-top: 70px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 100px;
@@ -278,7 +246,6 @@ scrollbar-width: none; */
     bottom: 0px;
 }
 
-
 #cardimage{
     position: absolute;
     top: 0px;
@@ -334,7 +301,6 @@ scrollbar-width: none; */
    
 }
 
-
 #infotitle{
     position: absolute;
     left: 450px;
@@ -377,13 +343,33 @@ scrollbar-width: none; */
     z-index: 3;
 }
 
-.hidden{
-    visibility: hidden;
+.hidden {
+    display: none; 
 }
 
-.nothidden{
-    visibility: visible;
+.nothidden {
+   
+}
 
+#containerfour {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    background-color: white;
+    z-index: 15;
+
+   
+    max-height: 0;          
+    opacity: 0;             
+    overflow: hidden;        
+    transition: max-height 12.0s ease, opacity 0.2s ease; 
+}
+
+
+#containerfour.nothidden {
+    max-height: 2000px;  
+    opacity: 1;           
 }
 
 #infoactivities{
@@ -413,7 +399,6 @@ scrollbar-width: none; */
 }
 
 
-
 .scrollable-div {
     width: 700px;
     height: 500px;
@@ -430,23 +415,15 @@ scrollbar-width: none; */
     z-index: 2;
     }
 
-#containerfour {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    height: 1000px;
-    width: 300px;
-    z-index: 1;
-    background-color: white;
-   
-}
+
 
 #parkbutton{
     position: absolute;
     right: 200px;
     top: 50px;
     height: 50px;
-    width: 100px;
+    width: 150px;
+    z-index: 10;
 }
   
  
@@ -469,10 +446,11 @@ scrollbar-width: none; */
 }
 
 #logo{
-    height: 250px;
-    width: 250px;
-    border-radius: 50%;
-    z-index: 5;
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    border-radius: 40%;
+    z-index: 9;
     margin-left: 50px;
     margin-top:50px;
 }
@@ -526,4 +504,66 @@ scrollbar-width: none; */
   .hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
     background-color: #2098D1;
     color: white;
+  }
+
+
+
+
+.card {
+    display: inline-block;
+    vertical-align: top;
+    margin: 15px;
+    width: 300px;
+    height: 420px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+    white-space: normal;
+  }
+  
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .card-body {
+    padding: 15px;
+    text-align: left;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 4px;
+  }
+  
+  .card-subtitle {
+    font-size: 0.95rem;
+    color: #777;
+  }
+  
+  
+  .like-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 22px;
+    color: #ddd;
+    transition: color 0.2s ease;
+  }
+  
+  .like-btn:hover {
+    color: gold;
   }
