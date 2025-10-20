@@ -1,12 +1,15 @@
- #body {
+    #body {
     background-color: white;
     font-family: 'Inter', sans-serif;
-    /* font-family: sans-serif; */
     border-color: dark grey;
     border-style: solid;
     border-radius: 25px;
     border: 3px;
 
+}
+
+#main-footer{
+    
 }
 
 #title{
@@ -120,9 +123,6 @@
     border-radius: 30px;
     height: 400px;
     width: 300px;
-
-    /* margin: 0; */
-  /* word-wrap: break-word;    */
   white-space: normal;           
   overflow-wrap: break-word;
 }
@@ -175,7 +175,7 @@
 }
 
 #stargazing{
-    /* opacity: 0.5; */
+    
     position: absolute;
     left: 200px;
     border-radius: 50%; 
@@ -191,7 +191,7 @@
     height: 300px;
 }
 
-#hiking:hover{
+ #hiking:hover{
     opacity: 0.9;
 }
 
@@ -219,7 +219,7 @@
     font-weight: bold;
     font-size: 25px;
     z-index: 3;
-}
+} 
 
 #horselabel{
     position: absolute;
@@ -252,9 +252,9 @@
     border-radius: 20px;
     height: 250px;
 
-}
+} 
 
-#parkinfo {
+ #parkinfo {
     border-radius: 20px;
     position: absolute;
     left: 150px;
@@ -263,7 +263,7 @@
     width: 1650px;
     background-color: white;
     z-index: 4; 
-}
+} 
 
 #infoimage{
     position: absolute;
@@ -274,7 +274,6 @@
 }
 
 #infoimage2{
-    /* opacity: 0.5; */
     position: absolute;
     top: 0px;
     left: 450px;
@@ -305,9 +304,9 @@
     position: absolute;
     left: 450px;
     z-index: 1;
-}
+} 
 
-#hikinglabel{
+  #hikinglabel{
     position: absolute;
     margin-top: -40px;
     margin-left: 450px;
@@ -566,4 +565,10 @@
   
   .like-btn:hover {
     color: gold;
-  }
+  }   
+
+ 
+
+  
+
+   
