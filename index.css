@@ -1,574 +1,337 @@
-    #body {
-    background-color: white;
-    font-family: 'Inter', sans-serif;
-    border-color: dark grey;
-    border-style: solid;
-    border-radius: 25px;
-    border: 3px;
 
-}
 
-#main-footer{
-    
-}
-
-#title{
-    position: absolute;
-    top: 200px;
-    left: 500px;
-    font-size: 80px;
-    color: orange;
-    z-index: 1;
-    opacity: 80%;
-}
-
-#carousel-section {
+  body {
+    background: linear-gradient(180deg, #fffefb 0%, #eaf5f3 100%);
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  #logo {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+  }
+  
+  #bucketToggle {
+    background-color: #5ab09b;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  #bucketToggle:hover {
+    background-color: #3b8f7c;
+  }
+  
+  
+  #carousel-section {
     max-width: 100%;
     margin: 0 auto;
   }
-  
   .carousel-item {
-    height: 400px; 
+    height: 420px;
   }
-  
   .carousel-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
   }
-  
   .carousel-caption {
-    background: rgba(0, 0, 0, 0.5); 
-    padding: 10px;
-    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    padding: 0.8rem;
   }
-  
-  .carousel-caption h5, 
+  .carousel-caption h5,
   .carousel-caption p {
     color: white;
   }
-
-
-
-
-#form{
-    position: absolute; 
-    border-radius: 20px;
-    z-index: 1;
-    left: 700px; 
-    top: 400px 
-}
-
-#input{
-    border-radius: 50px;
-    height: 75px;
-    width: 500px;
-}
-
-
-#star{
-    right: 0px;
-    font-size: 60px;
-    height: 50px;
-    width: 50px;
-    position: absolute;
-    z-index: 1;
-    color:rgb(43, 75, 85);
-}
-
-#label{
-    position: absolute;
-    left: 200px;
-    top: 450px;
-    z-index: 1;
-    color: orange;
-    opacity: 80%;
-}
-
-#label2{
-    position: absolute;
-    left: 200px;
-    top: 950px;
-    z-index: 1;
-    color: orange;
-    opacity: 80%;
-}
-
-#smalllabel{
-    position: absolute;
-     left: 1400px; 
-     top: 600px;
-    color: orange;
-    font-size: 20px;
-    opacity: 80%;
-}
-
-#label3{
-    position: absolute;
-    left: 200px;
-    top: 1400px;
-    z-index: 1;
-    color: orange;
-    opacity: 80%;
-}
-
-#card{
-    display: inline-block;
-    margin-right: 20px;
-    position: relative; 
-    left: 0px;
-    top: 50px;
-    border-style: solid;
-    border-color: rgb(109, 126, 109);
-    border-radius: 30px;
-    height: 400px;
-    width: 300px;
-  white-space: normal;           
-  overflow-wrap: break-word;
-}
-
-
-
-#container{
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch; 
-    margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 500px;
-    width: 1600px;
-    background-color: light grey;
-    border-radius: 25px;
-    scrollbar-width: none;
-
-}
-
-#containertwo{
-   
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 300px;
-    width: 1600px;
-    background-color: light grey;
-
-}
-
-.card-title{
-    font-weight: bold;
-}
-
-#containerthree{
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-    margin-top: 70px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 100px;
-    height: 500px;
-    width: 1600px;
-    background-color: white;
-    scrollbar-width: none;
-}
-
-#stargazing{
-    
-    position: absolute;
-    left: 200px;
-    border-radius: 50%; 
-    width: 300px;
-    height: 300px;
-}
-
-#hiking{
-    position: absolute;
-    left: 500px;
-    border-radius: 50%; 
-    width: 300px;
-    height: 300px;
-}
-
- #hiking:hover{
-    opacity: 0.9;
-}
-
-#kayaking{
-    position: absolute;
-    left: 800px;
-    border-radius: 50%; 
-    width: 300px;
-    height: 300px;
-}
-
-#camping{
-    position: absolute;
-    left: 1100px;
-    border-radius: 50%; 
-    width: 300px;
-    height: 300px;
-}
-
-#camplabel{
-    position: absolute;
-    margin-top: -40px;
-    margin-left: 1000px;
-    color: rgb(4, 54, 54);
-    font-weight: bold;
-    font-size: 25px;
-    z-index: 3;
-} 
-
-#horselabel{
-    position: absolute;
-    margin-top: -40px;
-    margin-left: 1300px;
-    color: rgb(1, 48, 48);
-    font-weight: bold;
-    font-size: 25px;
-    z-index: 3;
-
-}
-
-#horseback{
-    position: absolute;
-    left: 1400px;
-    border-radius: 50%; 
-    width: 300px;
-    height: 300px;
-    
-}
-
-#card-body {
-    position: absolute;
-    bottom: 0px;
-}
-
-#cardimage{
-    position: absolute;
-    top: 0px;
-    border-radius: 20px;
-    height: 250px;
-
-} 
-
- #parkinfo {
-    border-radius: 20px;
-    position: absolute;
-    left: 150px;
-    top: 350px;
-    height: 500px;
-    width: 1650px;
-    background-color: white;
-    z-index: 4; 
-} 
-
-#infoimage{
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    height: 250px;
-    width: 450px;
-}
-
-#infoimage2{
-    position: absolute;
-    top: 0px;
-    left: 450px;
-    height: 250px;
-    width: 450px;
-   
-}
-
-#infoimage3{
-    position: absolute;
-    top: 250px;
-    left: 0px;
-    height: 250px;
-    width: 450px;
-    
-}
-
-#infoimage4{
-    position: absolute;
-    top: 250px;
-    left: 450px;
-    height: 250px;
-    width: 450px;
-   
-}
-
-#infotitle{
-    position: absolute;
-    left: 450px;
-    z-index: 1;
-} 
-
-  #hikinglabel{
-    position: absolute;
-    margin-top: -40px;
-    margin-left: 450px;
-    color: rgb(6, 65, 65);
-    font-weight: bold;
-    font-size: 25px;
-    z-index: 3;
-}
-
-#iframe{
-    position: absolute;
-    top: 1000px;
-    left: 500px;
-}
-
-#starlabel {
-    position: absolute;
-    margin-top: -40px;
-    margin-left: 100px;
-    color: rgb(6, 66, 66);
-    font-weight: bold;
-    font-size: 25px;
-    z-index: 3;
-}
-
-#kayaklabel {
-    position: absolute;
-    margin-top: -40px;
-    margin-left: 720px;
-    color: rgb(3, 66, 66);
-    font-weight: bold;
-    font-size: 25px;
-    z-index: 3;
-}
-
-.hidden {
-    display: none; 
-}
-
-.nothidden {
-   
-}
-
-#containerfour {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 300px;
-    background-color: white;
-    z-index: 15;
-
-   
-    max-height: 0;          
-    opacity: 0;             
-    overflow: hidden;        
-    transition: max-height 12.0s ease, opacity 0.2s ease; 
-}
-
-
-#containerfour.nothidden {
-    max-height: 2000px;  
-    opacity: 1;           
-}
-
-#infoactivities{
-    position: absolute;
-    top: 400px;
-    text-align: center;
-}
-
-#infoweather{
-    position: absolute;
-    top: 500px;
-    text-align: center;
-}
-
-#infohours{
-    position: absolute;
-    top: 70px;
-    left: 260px; 
-    text-align: center;
-
-}
-
-#infodetails{
-    position: absolute;
-    top: 250px;
-    text-align: center;
-}
-
-
-.scrollable-div {
-    width: 700px;
-    height: 500px;
-    overflow-y: auto;
-    overflow-x: hidden; 
-    border: 1px solid #ccc;
-    padding: 10px; 
-}
-
-#scroll{
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    z-index: 2;
-    }
-
-
-
-#parkbutton{
-    position: absolute;
-    right: 200px;
-    top: 50px;
-    height: 50px;
-    width: 150px;
-    z-index: 10;
-}
   
- 
-#left{
-    height: 100px;
-    width: 100px;
-    position: absolute;
-    left: 0;
-    top: 800px;
-    transform: translateY(-50%);
-    }
-
-#right{
-    transform: rotate(175deg); 
-    height: 100px;
-    width: 100px;
-    position: absolute;
-    right: 0;
-    top: 80%;
-}
-
-#logo{
-    position: absolute;
-    height: 200px;
-    width: 200px;
-    border-radius: 40%;
-    z-index: 9;
-    margin-left: 50px;
-    margin-top:50px;
-}
-
-.hvr-grow {
-    display: inline-block;
-    vertical-align: middle;
-    transform: translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    backface-visibility: hidden;
-    -moz-osx-font-smoothing: grayscale;
-    transition-duration: 0.3s;
-    transition-property: transform;
-}
-
-.hvr-grow:hover,
-.hvr-grow:focus,
-.hvr-grow:active {
-    transform: scale(1.1);
-}
-
-.hvr-grow-shadow {
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-property: box-shadow, transform;
-    transition-property: box-shadow, transform;
+  
+  #filter-bar {
+    background: rgba(255, 255, 255, 0.9);
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    width: 90%;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   }
-  .hvr-grow-shadow:hover, #hvr-grow-shadow:focus, #hvr-grow-shadow:active {
-    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+  
+  #form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
   }
-
-  .hvr-fade {
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    overflow: hidden;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-property: color, background-color;
-    transition-property: color, background-color;
+  
+  #state-select {
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
   }
-  .hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
-    background-color: #2098D1;
+  
+  #activity-filters label {
+    margin-right: 1rem;
+    font-weight: 500;
+    color: #2b4a4a;
+  }
+  
+  #search-controls {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  #search-input {
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  #search-btn,
+  #reset-btn {
+    background-color: #5ab09b;
     color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.4rem 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
   }
-
-
-
-
-.card {
+  #search-btn:hover,
+  #reset-btn:hover {
+    background-color: #3b8f7c;
+  }
+  
+  
+  #map-section {
+    text-align: center;
+    margin: 3rem auto;
+    padding: 1rem;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #map {
+    height: 500px;
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 1rem;
+  }
+  
+  
+  #visited-count {
+    font-size: 1.2rem;
+    color: #2b4a4a;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    background: rgba(255, 255, 255, 0.8);
     display: inline-block;
-    vertical-align: top;
-    margin: 15px;
-    width: 300px;
-    height: 420px;
-    background: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 0.4rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.4s ease;
+  }
+  
+  #visited-progress {
+    width: 80%;
+    max-width: 600px;
+    height: 16px;
+    margin: 0.5rem auto 1.5rem auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    position: relative;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+  }
+  #visited-progress:hover {
+    box-shadow: 0 0 10px rgba(90, 176, 155, 0.6);
+  }
+  #progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #5ab09b, #3b8f7c);
+    border-radius: 10px;
+    transition: width 0.8s ease, background 0.8s ease;
+  }
+  
+  
+  #top-parks {
+    text-align: center;
+    margin: 3rem auto;
+    width: 90%;
+  }
+  #label {
+    color: #3b8f7c;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+  #container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+  }
+  
+  .card {
+    width: 280px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
     cursor: pointer;
-    white-space: normal;
   }
-  
   .card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
   }
-  
   .card-image {
     width: 100%;
-    height: 220px;
+    height: 180px;
     object-fit: cover;
-    display: block;
   }
-  
   .card-body {
-    padding: 15px;
+    padding: 1rem;
     text-align: left;
   }
-  
   .card-title {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 700;
-    color: #333;
-    margin-bottom: 4px;
+    margin-bottom: 0.4rem;
   }
-  
   .card-subtitle {
-    font-size: 0.95rem;
-    color: #777;
+    font-size: 0.9rem;
+    color: #666;
   }
-  
-  
   .like-btn {
     position: absolute;
-    top: 12px;
-    right: 12px;
-    font-size: 22px;
-    color: #ddd;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #ccc;
     transition: color 0.2s ease;
   }
-  
   .like-btn:hover {
     color: gold;
-  }   
-
- 
+  }
+  
+  
+  #bucketList {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 350px;
+    height: 100%;
+    background: white;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
+    transition: right 0.4s ease;
+    z-index: 30;
+    padding: 1rem;
+    overflow-y: auto;
+  }
+  #bucketList.open {
+    right: 0;
+  }
+  #bucketList h2 {
+    color: #3b8f7c;
+    text-align: center;
+  }
+  #closeBucket {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  #clearBucket {
+    background-color: #e46b6b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.4rem 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    display: block;
+    margin: 1rem auto;
+  }
+  #clearBucket:hover {
+    background-color: #c94a4a;
+  }
+  
+  
+  #visitedSummaryBody {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .visited-summary-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    padding: 0.5rem;
+    text-align: center;
+    transition: transform 0.2s ease;
+  }
+  .visited-summary-card:hover {
+    transform: scale(1.03);
+  }
+  .visited-summary-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+  }
+  .visited-summary-card h6 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2b4a4a;
+    margin: 0.3rem 0;
+  }
 
   
-
-   
+.modal-content {
+    background: #fffdf8;
+    border-radius: 14px;
+  }
+  #parkInfoBody img {
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0.5rem;
+  }
+  #main-footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #3b8f7c;
+    color: white;
+    margin-top: 3rem;
+  }
+  
